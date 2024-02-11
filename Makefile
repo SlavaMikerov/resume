@@ -3,7 +3,7 @@ all:
 
 output/resume.pdf: $(wildcard tex/*.tex)
 	mkdir -p build
-	xelatex --extra-mem-bot=10000000 -halt-on-error -output-directory=./build resume.tex; cd -
+	xelatex --verbose --extra-mem-bot=10000000 -halt-on-error -output-directory=./build resume.tex
 	mv -f build/resume.pdf resume.pdf
 
 clean:
